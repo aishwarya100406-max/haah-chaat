@@ -1,0 +1,143 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f0f2f5;
+}
+
+h1 {
+  background-color: #4a90e2;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  margin: 0;
+  font-size: 24px;
+}
+
+.chat-window {
+  border-radius: 10px;
+  background: #fff;
+  height: 70vh;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px 0;
+  overflow-y: scroll;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.chat-input {
+  display: flex;
+  width: 90%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.chat-input input[type=text] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.chat-input button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #4a90e2;
+  color: white;
+  font-size: 18px;
+}
+
+.my-msg, .other-msg {
+  margin: 5px 0;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 70%;
+  word-wrap: break-word;
+  position: relative;
+}
+
+.my-msg {
+  background-color: #dcf8c6;
+  margin-left: auto;
+}
+
+.other-msg {
+  background-color: #f1f0f0;
+  margin-right: auto;
+}
+
+.my-msg button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+#typing-indicator {
+  width: 90%;
+  max-width: 600px;
+  margin-bottom: 10px;
+  font-style: italic;
+  color: gray;
+}
+
+.emoji-picker {
+  position: fixed;
+  bottom: 80px;
+  right: 5%;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.emoji-picker span {
+  cursor: pointer;
+  font-size: 24px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 500px) {
+  .chat-window, .chat-input, #typing-indicator {
+    width: 95%;
+  }
+  .emoji-picker {
+    right: 2%;
+    max-width: 90%;
+  }
+}
+
+.login-container {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.login-container input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.login-container button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+}
