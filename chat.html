@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HAAH Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>HAAH Chatting</h1>
+  <div id="chat-window" class="chat-window"></div>
+  <div id="typing-indicator"></div>
+
+  <div class="chat-input">
+    <input type="text" id="message" placeholder="Type a message..." oninput="updateTyping()">
+    <button onclick="sendMessage()">Send</button>
+    <button onclick="toggleEmojiPicker()">😊</button>
+  </div>
+
+  <div id="emoji-picker" class="emoji-picker" style="display:none;">
+    <span onclick="sendEmoji('😊')">😊</span>
+    <span onclick="sendEmoji('😂')">😂</span>
+    <span onclick="sendEmoji('❤️')">❤️</span>
+    <span onclick="sendEmoji('👍')">👍</span>
+    <span onclick="sendEmoji('😎')">😎</span>
+    <span onclick="sendEmoji('🎉')">🎉</span>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js"></script>
+  <script src="firebase.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
 
